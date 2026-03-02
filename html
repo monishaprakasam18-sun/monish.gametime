@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subway Runner</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CHARACTER SELECT -->
+    <div id="characterSelect" class="menu">
+        <h1>Select Your Runner</h1>
+        <div class="char-container">
+            <img src="assets/char1.png" class="char" data-id="1">
+            <img src="assets/char2.png" class="char" data-id="2">
+            <img src="assets/char3.png" class="char" data-id="3">
+        </div>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- PAUSE MENU -->
+    <div id="pauseMenu" class="menu hidden">
+        <h1>Paused</h1>
+        <button onclick="resumeGame()">Resume</button>
+        <button onclick="location.reload()">Restart</button>
+    </div>
+
+    <!-- SCORE -->
+    <h2 id="score" class="hidden">Score: 0</h2>
+
+    <!-- GAME AREA -->
+    <div id="game" class="game hidden">
+        <div id="player" class="player"></div>
+        <div id="obstacle" class="obstacle"></div>
+        <div id="train" class="train"></div>
+        <div id="coin" class="coin"></div>
+        <div id="power" class="power"></div>
+    </div>
+
+    <audio id="bgm" loop src="assets/bg-music.mp3"></audio>
+    <audio id="coinSound" src="assets/coin.mp3"></audio>
+    <audio id="jumpSound" src="assets/jump.mp3"></audio>
+    <audio id="crashSound" src="assets/crash.mp3"></audio>
+    <audio id="powerSound" src="assets/powerup.mp3"></audio>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
