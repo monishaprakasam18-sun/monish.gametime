@@ -1,0 +1,14 @@
+subway-runner/
+│── index.html
+│── style.css
+│── game.js
+│── assets/
+│     ├── char1.png
+│     ├── char2.png
+│     ├── char3.png
+│     ├── run-sprite.png
+│     ├── coin.mp3
+│     ├── jump.mp3
+│     ├── crash.mp3
+│     ├── bg-music.mp3
+│     └── powerup.mp3
