@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.char-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.char {
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.char:hover {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}
+
+#score {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.game {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url('https://i.imgur.com/wXn7T5K.png') repeat-x;
+    background-size: cover;
+    perspective: 800px;
+}
+
+/* 3D lane effect */
+.player {
+    position: absolute;
+    width: 70px;
+    height: 90px;
+    transform: translateZ(0);
+    transition: transform 0.25s;
+    background-size: cover;
+}
+
+@keyframes runAnim {
+    from { background-position: 0; }
+    to { background-position: -280px; }
+}
+
+.player.running {
+    animation: runAnim 0.4s steps(4) infinite;
+}
+
+.obstacle,
+.train,
+.coin,
+.power {
+    position: absolute;
+}
+
+/* TRAIN */
+.train {
+    width: 180px;
+    height: 120px;
+    background: #900;
+    border-radius: 8px;
+}
+
+/* COIN */
+.coin {
+    width: 40px;
+    height: 40px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+}
+
+/* POWER-UP */
+.power {
+    width: 50px;
+    height: 50px;
+    background: cyan;
+    border-radius: 10px;
+    box-shadow: 0 0 15px cyan;
+}
